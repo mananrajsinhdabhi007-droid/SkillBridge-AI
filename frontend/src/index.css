@@ -1,0 +1,423 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #182235;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 34px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 15px 50px #17255412;
+}
+
+.auth-card h1 {
+  margin-bottom: 8px;
+}
+
+.auth-card > p {
+  color: #68758a;
+}
+
+.auth-card h1 span,
+.logo span {
+  color: #635bff;
+}
+
+.brand-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: #635bff;
+  color: white;
+  border-radius: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 25px 0;
+  background: #f0f2f8;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 11px;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.tabs .active {
+  background: white;
+  color: #635bff;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+input, textarea {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #dce2ec;
+  border-radius: 9px;
+  background: white;
+  color: #182235;
+  outline-color: #635bff;
+}
+
+.primary {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 16px;
+  background: #635bff;
+  color: white;
+  font-weight: 600;
+}
+
+.primary:hover {
+  background: #5047e5;
+}
+
+.primary:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.small {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+.notice {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 14px;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 76px;
+  border-bottom: 1px solid #e3e8f0;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #182235;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.secondary {
+  padding: 9px 15px;
+  border: 1px solid #dce2ec;
+  border-radius: 9px;
+  background: white;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0;
+  padding: 34px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(115deg, #4f46e5, #7c3aed);
+}
+
+.welcome h1 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin: 10px 0;
+}
+
+.welcome p {
+  color: #e7e7ff;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: #7770ff;
+}
+
+.welcome .eyebrow {
+  color: #e0e7ff;
+}
+
+.hero-symbol {
+  font-size: 75px;
+  padding: 0 15px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.stat-card, .panel, .job-card {
+  padding: 23px;
+  border: 1px solid #e8ebf2;
+  border-radius: 16px;
+  background: white;
+}
+
+.stat-card span, .stat-card small {
+  display: block;
+  color: #6b7588;
+}
+
+.stat-card strong {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 32px;
+}
+
+.panel {
+  margin: 24px 0 35px;
+}
+
+.panel p, .job-card p {
+  color: #68758a;
+  line-height: 1.6;
+}
+
+.panel textarea {
+  margin: 16px 0;
+  resize: vertical;
+}
+
+.panel .primary {
+  max-width: 300px;
+}
+
+.section-heading {
+  margin: 30px 0 18px;
+}
+
+.section-heading h2, .panel h2 {
+  margin-bottom: 8px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eeedff;
+  color: #635bff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.match {
+  font-size: 12px;
+  color: #087b51;
+  background: #e4f8ee;
+  border-radius: 20px;
+  padding: 7px 10px;
+  font-weight: bold;
+}
+
+.job-card h3 {
+  margin: 18px 0 4px;
+}
+
+.job-card .company {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.job-card h4 {
+  font-size: 13px;
+  margin: 20px 0 10px;
+}
+
+.progress {
+  height: 7px;
+  border-radius: 10px;
+  background: #e8eaf2;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  border-radius: inherit;
+  background: #635bff;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #fff1e9;
+  color: #b45309;
+}
+
+.tag.good {
+  background: #e3f8ed;
+  color: #087b51;
+}
+
+.muted {
+  font-size: 12px;
+  color: #7b8494;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 0;
+  margin-top: 20px;
+  color: #7b8494;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 0 14px;
+  }
+
+  .stats, .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    padding: 24px;
+  }
+
+  .hero-symbol {
+    font-size: 42px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+
+  .user-area {
+    gap: 8px;
+    font-size: 13px;
+  }
+}
+
+.ai-panel {
+  margin-top: 28px;
+}
+
+.ai-panel form {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ai-panel label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.ai-panel input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8dce5;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.ai-result {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #d8dce5;
+  border-radius: 12px;
+  background: #f8f9fc;
+}
+
+.ai-result pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.ai-panel button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
